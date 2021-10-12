@@ -140,7 +140,8 @@ jobs:
           asset_name: vault_raft_snapshot_agent_linux_arm
           asset_content_type: application/octet-stream
   release-container:
-    name: "release-container"
+    name: "release container/amd64"
+    needs: [compile-linux-amd64]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
